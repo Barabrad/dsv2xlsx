@@ -16,7 +16,8 @@ The libraries this script uses are listed below, as well as the download instruc
 ### Warning
 In Spring 2023, my semester of AME-341b, the xls files were opening in TextEdit as tab-delimited values. My assumption when making this script was that the delimiter would still be a tab, so it is a hard-coded value instead of a user input. If the values are not displaying properly in the xlsx files, maybe the delimiter changed. In that case, open one of the xls files in a plain text editor, see what the delimiter is, and then update the value in the code.
 
-Also, I am using a Mac, so the path slashes in the tutorial are different from those for Windows: "/" versus "\\" (the script accounts for this difference, but the tutorial does not).
+Also, I am using a Mac, so the path slashes in the tutorial are different from those for Windows: "/" versus "\\" (the script accounts for this difference in input, but the tutorial does not).
+    * Note that Python's `os.path.normpath()` will correct "/" to "\\" on Windows, but will not correct "\\" to "/" on Mac.
 
 ### Example Folder Organization
 Note that the ellipses in the folder paths below are meant to indicate that there could be a longer path. Suppose you had your xls files in folders that are all in one folder called XLS_Data:
@@ -52,6 +53,7 @@ Enter the path to the folder containing the xls files:
 2. At this point, enter the path to the existing xls folder. Afterwards, you will be prompted to enter the path to the xlsx folder. Note the following:
     * The xlsx folder does not have to be currently existing; the code can make new folders. If the xlsx folder does exist, it will give you a warning and ask you to confirm.
     * The xls and xlsx folders **cannot** be the same.
+    * The xlsx folder **cannot** be inside the xls folder.
     * **Do not use quotation marks.** The script evaluates these inputs as strings, so it does not matter if there are spaces in the file paths.
 ```
 Enter file path to the folder containing the xls files:
