@@ -7,7 +7,7 @@ This script provides a quick way to turn a set of .xls files into .xslx files (t
 This script will convert every xls file in a given input directory to a xlsx file in a given output directory, and it works on both Mac and Windows. If there are folders within the input directory, those folders will be made in the output directory and filled with the corresponding xlsx files. This script (as-is) will not read or copy non-xls files. Although there are comments in the code, I figured a document with a tutorial and warnings would be better. In this document, "terminal window" (for Mac) will mean "command prompt" for Windows.
 
 ### Libraries
-The libraries this script uses are listed below, as well as the download instructions. **My assumption is that you already have Python 3 installed on your computer.** To check, open a terminal window and type `python3 -V`. If this does not display a version number, install Python 3 first, and then return here. To see which non-built-in libraries are already installed, open a terminal window and type `pip3 list`.
+The libraries this script uses are listed below, as well as the download instructions. **My assumption is that you already have Python 3 installed on your computer.** To check, open a terminal window and type `python3 -V`. If the output does not display a version number, try `python -V`. If the latter command works, use `python` and `pip` instead of `python3` and `pip3`, respectively. If neither command shows a version number, install Python 3 first, and then return here. To see which non-built-in libraries are already installed, open a terminal window and type `pip3 list`.
 1. os
     * This library is built-in, so you should not need to install anything.
 2. xlsxwriter
